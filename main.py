@@ -1,4 +1,5 @@
 import pandas as pd
+from analyzer import print_summary, check_health
 
 def load_telemetry_data(file_path):
     try:
@@ -15,6 +16,8 @@ def main():
     
     if data is not None:
         print(data.head())  # Show first few rows
+        print_summary(data)
+        check_health(data)
 
 if __name__ == "__main__":
     main()
