@@ -1,0 +1,6 @@
+=== SATELLITE HEALTH REPORT === 
+
+Average Battery: 87.27%
+Max Temperature: 80.20°C
+Min Altitude: 387.00km
+Lowest Signal Strength: 60.00%

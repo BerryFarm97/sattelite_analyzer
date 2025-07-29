@@ -1,5 +1,6 @@
 import pandas as pd
 from analyzer import print_summary, check_health, plot_temps
+from analyzer import generate_report
 
 def load_telemetry_data(file_path):
     try:
@@ -19,6 +20,7 @@ def main():
         print_summary(data)
         check_health(data)
         plot_temps(data)
+        generate_report(data)
 
 if __name__ == "__main__":
     main()
