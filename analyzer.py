@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 
 def print_summary(data):
     print("=== SATELLITE TELEMETRY SUMMARY ===")
@@ -18,3 +20,13 @@ def check_health(data):
 
     if data['signal_strength'].min() < 60:
         print(f"📡WEAK SIGNAL!📡 SIGNAL: {data['signal_strength'].min():.2f}%")
+
+
+
+def plot_temps(data):
+    plt.plot(data["timestamp"], data["temperature_c"])
+    plt.title("Satellite Temperature Over Time")
+    plt.xlabel("Timestamp")
+    plt.ylabel("Temperature (°C)")
+    plt.grid(True)
+    plt.show()
